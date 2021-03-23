@@ -33,4 +33,8 @@ public class InputService {
     public void deleteInput(Integer inputId) {
         repository.deleteById(inputId);
     }
+
+    public void readAll(InputFilter filter) {
+        repository.findAllWithFilters(filter.getDate().minusDays(1), filter.getDate().plusDays(1));
+    }
 }
