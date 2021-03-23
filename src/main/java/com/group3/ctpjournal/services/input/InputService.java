@@ -34,7 +34,7 @@ public class InputService {
         repository.deleteById(inputId);
     }
 
-    public void readAll(InputFilter filter) {
-        repository.findAllWithFilters(filter.getDate().minusDays(1), filter.getDate().plusDays(1));
+    public List<Input> readAll(InputFilter filter) {
+        return InputMapper.entityListToModelList(repository.findAllWithFilters(filter.getDate().minusDays(1), filter.getDate().plusDays(1)));
     }
 }
