@@ -1,11 +1,8 @@
 package com.group3.ctpjournal.services.user;
 
 import com.group3.ctpjournal.infrastructure.mysql.repository.UserRepository;
-import com.group3.ctpjournal.services.field.Field;
-import org.mapstruct.factory.Mappers;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 
 @Service
